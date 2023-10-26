@@ -34,15 +34,13 @@ void printKey(int ch)
     screenGotoxy(34, 23);
     printf("            ");
     
-    if (ch == 27)
+    if (ch == 27) screenGotoxy(36, 23);
+    else screenGotoxy(39, 23);
+
+    printf("%d ", ch);
+    while (keyhit())
     {
-        screenGotoxy(36, 23);
-        printf("%d %d %d", ch, readch(), readch());
-    }
-    else
-    {
-        screenGotoxy(39, 23);
-        printf("%d ", ch);
+        printf("%d ", readch());
     }
 }
 
