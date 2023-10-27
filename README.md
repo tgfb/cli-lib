@@ -18,24 +18,19 @@ $ gcc ./src/*.c -I./include -o cli-lib-example
 To use this library to create your own apps, simply add source and header files to your project and compile it together with your own code, 
 replacing the main.c file to your own.
 
- 
-
-## *Overall Purpose*:
-   - The code creates a simple interactive program that runs in the command line interface.
-
 ## *Modules*:
    - The code is divided into several modules: keyboard, screen, and timer. Each module has specific responsibilities.
 
-## *Keyboard Module* (keyboard.c and keyboard.h):
+### *Keyboard Module* (keyboard.c and keyboard.h):
    - Provides functions to handle non-blocking keyboard input.
    - Initializes and configures terminal settings for non-blocking input.
    - Allows checking if a key has been pressed and reading it.
 
-## *Screen Module* (screen.c and screen.h):
+### *Screen Module* (screen.c and screen.h):
    - Manages terminal screen attributes, colors, and cursor positions.
    - Includes functions to set text attributes, draw borders, clear the screen, and update the display.
 
-## *Timer Module* (timer.c and timer.h):
+### *Timer Module* (timer.c and timer.h):
    - Implements a simple timer functionality using system time.
    - Allows initialization, destruction, updating, and checking if a specified time delay has passed.
 
