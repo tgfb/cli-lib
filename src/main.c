@@ -14,6 +14,7 @@
 int x = 34, y = 12;
 int incX = 1, incY = 1;
 
+// Function to print "Hello World" at specified coordinates
 void printHello(int nextX, int nextY)
 {
     screenSetColor(CYAN, DARKGRAY);
@@ -25,6 +26,7 @@ void printHello(int nextX, int nextY)
     printf("Hello World");
 }
 
+// Function to print the ASCII code of a pressed key
 void printKey(int ch)
 {
     screenSetColor(YELLOW, DARKGRAY);

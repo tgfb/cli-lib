@@ -7,6 +7,7 @@
 
 #include "screen.h"
 
+// Function for drawing borders on the screen using BOX characters
 void screenDrawBorders() 
 {
     char hbc = BOX_HLINE;
@@ -48,6 +49,7 @@ void screenDrawBorders()
     
 }
 
+// Initialize the screen with optional border
 void screenInit(int drawBorders)
 {
     screenClear();
@@ -56,6 +58,7 @@ void screenInit(int drawBorders)
     screenHideCursor();
 }
 
+// Clean up and restore the screen to the initial state
 void screenDestroy()
 {
     printf("%s[0;39;49m", ESC); // Reset colors
@@ -65,6 +68,7 @@ void screenDestroy()
     screenShowCursor();
 }
 
+// Move the cursor to position (x, y)
 void screenGotoxy(int x, int y)
 {
     x = ( x<0 ? 0 : x>=MAXX ? MAXX-1 : x);
@@ -73,6 +77,7 @@ void screenGotoxy(int x, int y)
     printf("%s[f%s[%dB%s[%dC", ESC, ESC, y, ESC, x);
 }
 
+// Define text colors (foreground and background)
 void screenSetColor( screenColor fg, screenColor bg)
 {
     char atr[] = "[0;";

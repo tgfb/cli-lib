@@ -12,23 +12,27 @@
 static struct timeval timer, now;
 static int delay = -1;
 
+// Initialize the timer with a specified value in milliseconds
 void timerInit(int valueMilliSec)
 {
     delay = valueMilliSec;
     gettimeofday(&timer, NULL);
 }
 
+// Destroy the timer (unset the delay value)
 void timerDestroy()
 {
     delay = -1;
 }
 
+// Update the timer with a new value in milliseconds
 void timerUpdateTimer(int valueMilliSec)
 {
     delay = valueMilliSec;
     gettimeofday(&timer, NULL);
 }
 
+// Get the time difference in milliseconds
 int getTimeDiff()
 {
     gettimeofday(&now, NULL);
@@ -36,6 +40,7 @@ int getTimeDiff()
     return (int) diff;
 }
 
+// Check if the specified time delay has passed
 int timerTimeOver()
 {
     int ret = 0;
@@ -49,6 +54,7 @@ int timerTimeOver()
     return ret;
 }
 
+// Print the time difference since initialization
 void timerPrint()
 {
     printf("Timer:  %d", getTimeDiff());
