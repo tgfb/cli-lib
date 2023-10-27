@@ -13,7 +13,7 @@
 static struct termios initialSettings, newSettings;
 static int peekCharacter;
 
-
+// Initialize terminal settings for non-blocking input
 void keyboardInit()
 {
     tcgetattr(0,&initialSettings);
@@ -26,11 +26,13 @@ void keyboardInit()
     tcsetattr(0, TCSANOW, &newSettings);
 }
 
+// Restore initial terminal settings
 void keyboardDestroy()
 {
     tcsetattr(0, TCSANOW, &initialSettings);
 }
 
+// Check if a key has been pressed
 int keyhit()
 {
     unsigned char ch;
@@ -53,6 +55,7 @@ int keyhit()
     return 0;
 }
 
+// Read a character from input
 int readch()
 {
     char ch;

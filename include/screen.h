@@ -6,6 +6,8 @@
  * Reference: https://en.wikipedia.org/wiki/ANSI_escape_code
 */
 
+// Screen Constants and Function Declarations
+
 #ifndef __SCREEN_H__
 #define __SCREEN_H__
 

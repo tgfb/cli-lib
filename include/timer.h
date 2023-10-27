@@ -5,6 +5,8 @@
  * Based on "From C to C++ course - 2002"
 */
 
+// Function declarations for timer functionality
+
 void timerInit(int valueMilliSec);
 
 void timerDestroy();
