@@ -1,5 +1,9 @@
 <h1 align="center"> Mazerun </h1>
 
+<p align="center">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
 <h3>O que é o "Mazerun"?</h3>
 
 <p>MazeRun é um emocionante jogo de labirinto inspirado no icônico Pac-Man. Neste jogo, a combinação de estratégia astuta e agilidade é fundamental para a vitória. </p>
