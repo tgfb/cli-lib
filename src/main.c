@@ -47,6 +47,7 @@ void printKey(int ch)
 int main() 
 {
     static int ch = 0;
+    static long timer = 0;
 
     screenInit(1);
     keyboardInit();
@@ -55,7 +56,7 @@ int main()
     printHello(x, y);
     screenUpdate();
 
-    while (ch != 10) //enter
+    while (ch != 10 && timer <= 100) //enter or 5s
     {
         // Handle user input
         if (keyhit()) 
@@ -73,10 +74,10 @@ int main()
             int newY = y + incY;
             if (newY >= MAXY-1 || newY <= MINY+1) incY = -incY;
 
-            printKey(ch);
             printHello(newX, newY);
 
             screenUpdate();
+            timer++;
         }
     }
 
